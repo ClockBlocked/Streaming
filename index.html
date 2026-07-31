@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>
+MyBeats™  |  Stream & Share 
+    </title>
+    
+    <meta
+      name="description"
+      content="MyBeats – Stream & Share"
+    />
+
+<link rel="stylesheet" href="https://mybeats.cloud/ui/progress.css" />
+<script src="https://mybeats.cloud/modules/progress.js"></script>
+
+<script>
+(function initTheme() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+
+  document.querySelectorAll('.themeToggle').forEach(btn => {
+    btn.classList.toggle('dark', savedTheme === 'dark');
+  });
+})();
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9NGGNFW3HL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9NGGNFW3HL');
+</script>
+
+
+<script data-label="styles">
+(function loadStyleSheets() {
+  const BASE_PATH = '/styling/';
+
+  const sheets = [
+    'base/setup',
+  //  'base/themes',
+    'base/icons',
+    'base/images',
+    'base/lists',
+    'base/youTube',
+    
+    'navbars/top',
+    'navbars/breadcrumbs',
+    'navbars/albums',
+    
+    'pages/home',
+    'pages/library',
+    'pages/playlists',
+    'pages/artists',
+    'pages/favorites',
+    
+    'players/drawer',
+    'players/floating',
+    
+    'overlays/modals',
+    'overlays/dropDowns',
+    'overlays/popOvers',
+    'overlays/search',
+    'overlays/toasts',
+    'overlays/toolTips',
+
+
+
+    'newCSS/base/setup',
+    'newCSS/base/themes',
+    'newCSS/base/icons',
+    'newCSS/base/images',
+    'newCSS/base/lists',
+    'newCSS/base/youTube',
+    
+    'newCSS/navbars/top',
+    'newCSS/navbars/breadcrumbs',
+    'newCSS/navbars/albums',
+    
+    'newCSS/pages/home',
+    'newCSS/pages/library',
+    'newCSS/pages/playlists',
+    'newCSS/pages/artists',
+    'newCSS/pages/favorites',
+    
+    'newCSS/players/drawer',
+    'newCSS/players/floating',
+    
+    'newCSS/overlays/modals',
+    'newCSS/overlays/dropDowns',
+    'newCSS/overlays/popOvers',
+    'newCSS/overlays/search',
+    'newCSS/overlays/toasts',
+    'newCSS/overlays/toolTips'
+
+
+  ];
+
+  const fragment = document.createDocumentFragment();
+
+  sheets.forEach(name => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${BASE_PATH}${name}.css`;
+    fragment.appendChild(link);
+  });
+
+  document.head.appendChild(fragment);
+})();
+</script>
+
+
+
+    <link rel="preconnect" href="https://rsms.me/" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/manifest/ios/57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/manifest/ios/60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/manifest/ios/72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/manifest/ios/76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/manifest/ios/114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/manifest/ios/120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/manifest/ios/144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/manifest/ios/152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="/manifest/ios/167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/manifest/ios/180.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/manifest/ios/32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/manifest/ios/16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#12141c" />
+    <meta
+      name="msapplication-TileImage"
+      content="/manifest/icons/mstile-100.png"
+    />
+    <meta name="theme-color" content="#12141c" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/ui/ytSaver.css" />
+  
+
+    <meta name="app-version" content="v2024.06" />
+
+    
+  </head>
+  <body>
+
+
+
+    <nav data-navbar="site">
+      <div class="wrap">
+        <div class="logo">
+          <div class="icon">
+            <svg
+              fill="#ff8605"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="-201.61 -201.61 872.08 872.08"
+              xml:space="preserve"
+              stroke="#ff8605"
+              stroke-width="0.00468859"
+              transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"
+            >
+              <g
+                id="SVGRepo_bgCarrier"
+                stroke-width="0"
+                transform="translate(234.4295,234.4295), scale(0)"
+              >
+                <rect
+                  x="-201.61"
+                  y="-201.61"
+                  width="872.08"
+                  height="872.08"
+                  rx="436.04"
+                  fill="#d4dde4"
+                  stroke-width="0"
+                ></rect>
+              </g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#CCCCCC"
+                stroke-width="53.44992599999999"
+              >
+                <g>
+                  <path d="M235.554,0C109.784,0,3.532,102.367,3.532,223.536c0,68.314,33.927,149.905,86.43,207.865l1.484,1.639l2.164-0.429 c0.553-0.1,12.578-2.637,17.603-11.834c12.317,10.095,23.253,11.085,34.757,6.961c5.115,9.843,7.103,20.559-6.606,24.445 c-12.906,3.675-30.152-1.094-42.886-3.025c-21.219-3.222-66.178-4.156-87.61-3.358c-10.092,0.381-10.128,16.082,0,15.701 c25.874-0.958,74.494,1.606,100.092,5.241c12.808,1.82,29.16,4.341,41.437-1.623c21.209-10.303,17.637-27.875,9.105-44.146 c6.404-3.907,13.235-8.844,20.638-14.15c-20.528-9.017-47.406-49.355-65.764-84.528c-12.99-24.902-38.401-77.676-35.536-104.35 c-15.867,10.896-28.212,20.386-34.91,32.837c-1.854-11.745-2.852-23.271-2.852-34.43c0-96.018,100.557-160.516,194.469-160.516 c116.331,0,194.46,83,194.46,160.516c0,11.093-0.897,22.456-2.625,33.953c-6.744-12.219-18.987-21.612-34.652-32.36 c2.869,26.674-22.537,79.447-35.533,104.35c-18.351,35.173-45.236,75.52-65.762,84.528c28.204,20.238,47.103,34.46,72.189,11.085 c5.133,7.975,14.463,12.158,14.939,12.359l2.601,1.117l1.884-2.115c51.359-57.743,84.528-138.493,84.528-205.742 C467.575,102.357,361.322,0,235.554,0z"></path>
+                  <path d="M93.646,209.917c-0.99,0-1.863,0.232-2.673,0.589c-0.287,0.126-0.601,0.218-0.87,0.391 c-11.407,7.468,3.939,55.427,31.244,107.756c24.917,47.752,53.217,82.208,66.652,82.208c0.25,0,0.475-0.072,0.713-0.092 c0.988-0.108,1.923-0.353,2.725-0.878c0.878-0.581,1.569-1.479,2.166-2.528c0.03-0.061,0.062-0.145,0.092-0.204 c6.885-12.788-5.973-57.491-31.038-105.532C137.771,243.93,107.46,209.909,93.646,209.917z"></path>
+                  <path d="M350.25,318.652c27.303-52.329,42.647-100.296,31.242-107.756c-0.269-0.172-0.585-0.265-0.874-0.391 c-0.806-0.356-1.679-0.589-2.669-0.589c-13.806,0-44.126,34.013-69.012,81.709c-25.062,48.049-37.926,92.756-31.041,105.536 c0.031,0.063,0.067,0.14,0.1,0.2c0.589,1.058,1.286,1.964,2.16,2.528c0.821,0.537,1.771,0.798,2.785,0.89 c0.213,0.024,0.421,0.093,0.657,0.093C297.023,400.873,325.328,366.404,350.25,318.652z"></path>
+                  <path d="M247.696,93.629c-8.111-1.381-14.741,4.59-14.741,12.818v84.997c-4.795-1.759-9.959-2.771-15.371-2.771 c-24.697,0-44.715,20.019-44.715,44.721c0,24.693,20.018,44.711,44.715,44.711c18.098,0,33.662-10.748,40.691-26.205 c3.414-7.481,3.903-20.99,3.936-29.212c0.092-26.299,0.092-78.205,0.092-78.205c57.771,0,54.309,34.622,47.545,54.505 c-2.646,7.789-1.07,9.091,4.496,3.032C384.842,125.226,286.681,100.264,247.696,93.629z"></path>
+                </g>
+              </g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <path d="M235.554,0C109.784,0,3.532,102.367,3.532,223.536c0,68.314,33.927,149.905,86.43,207.865l1.484,1.639l2.164-0.429 c0.553-0.1,12.578-2.637,17.603-11.834c12.317,10.095,23.253,11.085,34.757,6.961c5.115,9.843,7.103,20.559-6.606,24.445 c-12.906,3.675-30.152-1.094-42.886-3.025c-21.219-3.222-66.178-4.156-87.61-3.358c-10.092,0.381-10.128,16.082,0,15.701 c25.874-0.958,74.494,1.606,100.092,5.241c12.808,1.82,29.16,4.341,41.437-1.623c21.209-10.303,17.637-27.875,9.105-44.146 c6.404-3.907,13.235-8.844,20.638-14.15c-20.528-9.017-47.406-49.355-65.764-84.528c-12.99-24.902-38.401-77.676-35.536-104.35 c-15.867,10.896-28.212,20.386-34.91,32.837c-1.854-11.745-2.852-23.271-2.852-34.43c0-96.018,100.557-160.516,194.469-160.516 c116.331,0,194.46,83,194.46,160.516c0,11.093-0.897,22.456-2.625,33.953c-6.744-12.219-18.987-21.612-34.652-32.36 c2.869,26.674-22.537,79.447-35.533,104.35c-18.351,35.173-45.236,75.52-65.762,84.528c28.204,20.238,47.103,34.46,72.189,11.085 c5.133,7.975,14.463,12.158,14.939,12.359l2.601,1.117l1.884-2.115c51.359-57.743,84.528-138.493,84.528-205.742 C467.575,102.357,361.322,0,235.554,0z"></path>
+                  <path d="M93.646,209.917c-0.99,0-1.863,0.232-2.673,0.589c-0.287,0.126-0.601,0.218-0.87,0.391 c-11.407,7.468,3.939,55.427,31.244,107.756c24.917,47.752,53.217,82.208,66.652,82.208c0.25,0,0.475-0.072,0.713-0.092 c0.988-0.108,1.923-0.353,2.725-0.878c0.878-0.581,1.569-1.479,2.166-2.528c0.03-0.061,0.062-0.145,0.092-0.204 c6.885-12.788-5.973-57.491-31.038-105.532C137.771,243.93,107.46,209.909,93.646,209.917z"></path>
+                  <path d="M350.25,318.652c27.303-52.329,42.647-100.296,31.242-107.756c-0.269-0.172-0.585-0.265-0.874-0.391 c-0.806-0.356-1.679-0.589-2.669-0.589c-13.806,0-44.126,34.013-69.012,81.709c-25.062,48.049-37.926,92.756-31.041,105.536 c0.031,0.063,0.067,0.14,0.1,0.2c0.589,1.058,1.286,1.964,2.16,2.528c0.821,0.537,1.771,0.798,2.785,0.89 c0.213,0.024,0.421,0.093,0.657,0.093C297.023,400.873,325.328,366.404,350.25,318.652z"></path>
+                  <path d="M247.696,93.629c-8.111-1.381-14.741,4.59-14.741,12.818v84.997c-4.795-1.759-9.959-2.771-15.371-2.771 c-24.697,0-44.715,20.019-44.715,44.721c0,24.693,20.018,44.711,44.715,44.711c18.098,0,33.662-10.748,40.691-26.205 c3.414-7.481,3.903-20.99,3.936-29.212c0.092-26.299,0.092-78.205,0.092-78.205c57.771,0,54.309,34.622,47.545,54.505 c-2.646,7.789-1.07,9.091,4.496,3.032C384.842,125.226,286.681,100.264,247.696,93.629z"></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <span class="text">MyBeats<span>™</span></span>
+        </div>
+        <div class="links">
+          <button
+            class="link"
+            data-nav="home"
+          >Home</button>
+          <button
+            class="link"
+            data-nav="library"
+          >Library</button>
+          <button
+            class="link"
+            data-nav="favorites"
+          >Favorites</button>
+          <button
+            class="link"
+            data-nav="playlists"
+          >Playlists</button>
+        </div>
+        <div class="actions">
+          <button
+            id="open-search"
+            class="btn"
+            title="Search (Ctrl+K)"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+          </button>
+          <button
+            id="theme-toggle"
+            class="themeToggle"
+            title="Toggle Theme"
+          >
+            <svg
+              class="sun"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+            </svg>
+            <svg
+              class="moon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+          <button
+            id="settings-btn"
+            class="btn"
+            title="Settings"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="3" />
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    
+    <div data-navbar="breadcrumbs">
+      <div
+        class="trail"
+      >
+        <div class="wrap">
+          <div
+            class="items"
+            id="breadcrumb-items"
+          ></div>
+        </div>
+      </div>
+      <button
+        id="breadcrumb-toggle"
+        class="toggle"
+        title="Toggle breadcrumbs"
+      >
+        <svg
+          class="chevron"
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+    </div>
+    
+    <div
+      id="search-bar"
+      class="hidden"
+      data-overlay="search"
+    >
+      <div
+        class="overlay"
+        id="search-overlay"
+      ></div>
+      <div class="panel">
+        <div class="head">
+          <div class="field">
+            <svg
+              class="icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.35-4.35" />
+            </svg>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search songs, artists, albums..."
+              autocomplete="off"
+              autocorrect="off"
+              spellcheck="false"
+            />
+            <kbd class="kbd">ESC</kbd>
+          </div>
+          <button
+            class="close"
+            id="close-search"
+            title="Close"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div
+          id="search-results-container"
+          class="results hidden"
+        ></div>
+      </div>
+    </div>
+
+
+
+
+    <main
+      id="main-content"
+      class="wrapper"
+    >
+
+
+
+
+
+
+    </main>
+
+
+
+    <div id="player-bar-container"></div>
+    <div
+      data-overlay="drawer"
+      id="player-drawer-overlay"
+    ></div>
+
+    <div id="full-player-drawer"></div>
+
+    <div id="visualizer-canvas"></div>
+
+
+    <div
+      data-overlay="modal"
+      id="modal-overlay"
+    ></div>
+    <div
+      class="modal"
+      id="modal"
+    ></div>
+    
+    <div
+      data-overlay="toast"
+      id="toast"
+    ></div>
+
+
+
+    <audio
+      id="global-audio"
+      preload="none"
+      crossorigin="anonymous"
+    ></audio>
+
+
+
+<script src="/pwa.js"></script>
+
+<script>
+        (function () {
+            const CONFIG = {
+                swUrl: '/sw.js', // Path to your service worker file
+                swScope: '/', // Scope — must be at or below the SW file's location
+                updateCheckIntervalMs: 10 * 60 * 1000, // Check for updates every 10 minutes
+                updateBannerAutoShow: true, // Automatically show update banner when update found
+                debug: (function () {
+                    // Enable debug via query param: ?sw-debug=1
+                    try {
+                        return new URLSearchParams(window.location.search).get('sw-debug') === '1';
+                    } catch (_) {
+                        return false;
+                    }
+                })(),
+            };
+
+            // ─── State ──────────────────────────────────
+            const STATE = {
+                supported: false,
+                registration: null,
+                installingWorker: null,
+                waitingWorker: null,
+                activeWorker: null,
+                updateBanner: null,
+                updateBannerVisible: false,
+                updateCheckTimer: null,
+                isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+                deferredPrompt: null, // shared reference for install banner
+            };
+
+            // ─── Logger ─────────────────────────────────
+            const log = CONFIG.debug
+                ? (...args) => console.log('[SW·Reg]', ...args)
+                : () => { };
+            const warn = (...args) => console.warn('[SW·Reg]', ...args);
+            const error = (...args) => console.error('[SW·Reg]', ...args);
+
+            log('Initialized with config:', CONFIG);
+
+            // ─── Feature Detection ──────────────────────
+            function detectSupport() {
+                const hasSW = 'serviceWorker' in navigator;
+                const hasFetch = 'fetch' in window;
+                const hasPromise = typeof Promise !== 'undefined';
+                const isSecure =
+                    window.location.protocol === 'https:' ||
+                    window.location.hostname === 'localhost' ||
+                    window.location.hostname === '127.0.0.1' ||
+                    window.location.hostname.startsWith('192.168.') ||
+                    window.location.hostname.startsWith('10.') ||
+                    window.location.hostname.includes('.local');
+
+                STATE.supported = hasSW && hasFetch && hasPromise && isSecure;
+
+                if (!STATE.supported) {
+                    const reasons = [];
+                    if (!hasSW) reasons.push('Service Worker API missing');
+                    if (!hasFetch) reasons.push('Fetch API missing');
+                    if (!hasPromise) reasons.push('Promise support missing');
+                    if (!isSecure) reasons.push('Non-secure context (requires HTTPS or localhost)');
+                    warn('Service Worker not supported:', reasons.join('; '));
+                } else {
+                    log('Service Worker is supported');
+                }
+
+                return STATE.supported;
+            }
+
+            // ─── Create Update Banner DOM ──────────────
+            function createUpdateBanner() {
+                if (STATE.updateBanner) return STATE.updateBanner;
+
+                const banner = document.createElement('div');
+                banner.className = 'updateBanner';
+                banner.setAttribute('data-overlay','update');
+                banner.setAttribute('role', 'alert');
+                banner.setAttribute('aria-live', 'polite');
+                banner.innerHTML = `
+                    <div class="content">
+                        <p class="title">Update Available</p>
+                        <p class="desc">A new version is ready. Tap to refresh.</p>
+                    </div>
+                    <div class="refresh">
+                        <svg viewBox="0 0 24 24">
+                            <polyline points="23 4 23 10 17 10"/>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                    </div>
+                    <button class="close" aria-label="Dismiss update" title="Dismiss">&times;</button>
+                `;
+
+                // Click on banner body → trigger update
+                banner.addEventListener('click', function (e) {
+                    // Don't trigger if the close button was clicked
+                    if (e.target.closest('.close')) return;
+                    triggerUpdate();
+                });
+
+                // Close button
+                const closeBtn = banner.querySelector('.close');
+                closeBtn.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                    dismissUpdateBanner();
+                });
+
+                document.body.appendChild(banner);
+                STATE.updateBanner = banner;
+                log('Update banner DOM created');
+                return banner;
+            }
+
+            // ─── Show Update Banner ────────────────────
+            function showUpdateBanner() {
+                if (STATE.updateBannerVisible) return;
+                const banner = createUpdateBanner();
+                // Reset any dismiss animation
+                banner.classList.remove('dismissing');
+                // Force reflow to restart animation
+                void banner.offsetWidth;
+                banner.classList.add('visible');
+                STATE.updateBannerVisible = true;
+                log('Update banner shown');
+            }
+
+            // ─── Dismiss Update Banner ─────────────────
+            function dismissUpdateBanner() {
+                if (!STATE.updateBannerVisible || !STATE.updateBanner) return;
+                const banner = STATE.updateBanner;
+                banner.classList.add('dismissing');
+                banner.classList.remove('visible');
+                STATE.updateBannerVisible = false;
+                // Clean up after animation
+                banner.addEventListener(
+                    'animationend',
+                    function handler() {
+                        banner.classList.remove('dismissing');
+                        banner.removeEventListener('animationend', handler);
+                        log('Update banner dismissed');
+                    },
+                    { once: true }
+                );
+            }
+
+            // ─── Trigger Update (Skip Waiting + Reload) ─
+            function triggerUpdate() {
+                const waiting = STATE.waitingWorker;
+                if (!waiting) {
+                    warn('No waiting worker to activate');
+                    return;
+                }
+
+                log('Triggering skipWaiting on waiting worker');
+                waiting.postMessage({ type: 'SKIP_WAITING' });
+
+                // Listen for controller change, then reload
+                const controllerChangeHandler = function () {
+                    log('Controller changed — reloading page');
+                    navigator.serviceWorker.removeEventListener('controllerchange', controllerChangeHandler);
+                    window.location.reload();
+                };
+
+                navigator.serviceWorker.addEventListener('controllerchange', controllerChangeHandler);
+
+                // Fallback: if controllerchange doesn't fire within 3s, reload anyway
+                setTimeout(function () {
+                    if (navigator.serviceWorker.controller === STATE.waitingWorker ||
+                        STATE.waitingWorker?.state === 'activated') {
+                        log('Fallback reload after skipWaiting');
+                        navigator.serviceWorker.removeEventListener('controllerchange', controllerChangeHandler);
+                        window.location.reload();
+                    }
+                }, 3000);
+            }
+
+            // ─── Handle New Worker (Installing → Waiting) ──
+            function handleNewWorker(worker) {
+                log('New worker detected, state:', worker.state);
+
+                STATE.installingWorker = worker;
+
+                worker.addEventListener('statechange', function () {
+                    log('Worker state changed to:', worker.state);
+
+                    if (worker.state === 'installed') {
+                        // The new worker is installed but waiting
+                        STATE.waitingWorker = worker;
+                        STATE.installingWorker = null;
+
+                        if (CONFIG.updateBannerAutoShow) {
+                            showUpdateBanner();
+                        }
+
+                        log('New worker is waiting. Update banner ' +
+                            (CONFIG.updateBannerAutoShow ? 'shown.' : 'suppressed.'));
+                    }
+
+                    if (worker.state === 'activated') {
+                        STATE.activeWorker = worker;
+                        STATE.waitingWorker = null;
+                        dismissUpdateBanner();
+                        log('New worker activated');
+                    }
+
+                    if (worker.state === 'redundant') {
+                        STATE.installingWorker = null;
+                        STATE.waitingWorker = null;
+                        warn('Worker became redundant');
+                    }
+                });
+            }
+
+            // ─── Register Service Worker ────────────────
+            async function registerSW() {
+                if (!STATE.supported) return null;
+
+                try {
+                    log('Registering service worker:', CONFIG.swUrl, 'scope:', CONFIG.swScope);
+                    const registration = await navigator.serviceWorker.register(CONFIG.swUrl, {
+                        scope: CONFIG.swScope,
+                        // 'updateViaCache': 'none' ensures the browser always fetches
+                        // the latest SW script (respecting HTTP cache headers)
+                        updateViaCache: 'none',
+                    });
+
+                    STATE.registration = registration;
+                    log('Registration successful. Scope:', registration.scope);
+
+                    // ── Check existing state ────────────────
+                    if (registration.installing) {
+                        log('Worker already installing');
+                        handleNewWorker(registration.installing);
+                    } else if (registration.waiting) {
+                        log('Worker already waiting (from previous visit)');
+                        STATE.waitingWorker = registration.waiting;
+                        handleNewWorker(registration.waiting);
+                        // Show banner immediately since there's a pending update
+                        if (CONFIG.updateBannerAutoShow) {
+                            showUpdateBanner();
+                        }
+                    } else if (registration.active) {
+                        STATE.activeWorker = registration.active;
+                        log('Active worker found. State:', registration.active.state);
+                    }
+
+                    // ── Listen for updates ──────────────────
+                    registration.addEventListener('updatefound', function () {
+                        const newWorker = registration.installing;
+                        if (!newWorker) return;
+                        log('Update found — new worker installing');
+                        handleNewWorker(newWorker);
+                    });
+
+                    // ── Periodic update checks ──────────────
+                    if (CONFIG.updateCheckIntervalMs > 0) {
+                        STATE.updateCheckTimer = setInterval(function () {
+                            log('Periodic update check triggered');
+                            if (STATE.registration) {
+                                STATE.registration.update().catch(function (err) {
+                                    warn('Periodic update check failed:', err.message);
+                                });
+                            }
+                        }, CONFIG.updateCheckIntervalMs);
+                        log('Periodic update checks enabled every',
+                            CONFIG.updateCheckIntervalMs / 1000, 'seconds');
+                    }
+
+                    // ── Controller reference ─────────────────
+                    if (navigator.serviceWorker.controller) {
+                        STATE.activeWorker = navigator.serviceWorker.controller;
+                        log('Page is controlled by SW. Script URL:',
+                            navigator.serviceWorker.controller.scriptURL);
+                    }
+
+                    return registration;
+
+                } catch (err) {
+                    error('Service worker registration failed:', err.message);
+                    STATE.registration = null;
+
+                    // Dispatch a custom event so the app can react if needed
+                    window.dispatchEvent(new CustomEvent('sw:registration-failed', {
+                        detail: { error: err.message },
+                    }));
+
+                    return null;
+                }
+            }
+
+            // ─── Online/Offline Monitoring ──────────────
+            function setupConnectivityMonitoring() {
+                window.addEventListener('online', function () {
+                    STATE.isOnline = true;
+                    log('Network: online');
+                    // Optionally trigger an immediate update check when coming back online
+                    if (STATE.registration) {
+                        STATE.registration.update().catch(function () { });
+                    }
+                    window.dispatchEvent(new CustomEvent('sw:online'));
+                });
+
+                window.addEventListener('offline', function () {
+                    STATE.isOnline = false;
+                    log('Network: offline');
+                    window.dispatchEvent(new CustomEvent('sw:offline'));
+                });
+
+                log('Connectivity monitoring enabled. Current status:',
+                    STATE.isOnline ? 'online' : 'offline');
+            }
+
+            // ─── Message Handler (SW → Page) ────────────
+            function setupMessageHandler() {
+                navigator.serviceWorker.addEventListener('message', function (event) {
+                    log('Message from SW:', event.data);
+
+                    // Handle various message types from the service worker
+                    if (event.data && event.data.type) {
+                        switch (event.data.type) {
+                            case 'UPDATE_AVAILABLE':
+                                log('SW notified: update available');
+                                if (!STATE.updateBannerVisible && CONFIG.updateBannerAutoShow) {
+                                    showUpdateBanner();
+                                }
+                                break;
+                            case 'CACHE_UPDATED':
+                                log('SW notified: cache updated —', event.data.payload);
+                                break;
+                            case 'OFFLINE_READY':
+                                log('SW notified: offline content ready');
+                                break;
+                            default:
+                                log('Unhandled SW message type:', event.data.type);
+                        }
+                    }
+
+                    // Forward all SW messages as custom events
+                    window.dispatchEvent(new CustomEvent('sw:message', {
+                        detail: event.data,
+                    }));
+                });
+                log('SW message handler configured');
+            }
+
+            // ─── Debug: Unregister Helper ───────────────
+            function exposeDebugAPI() {
+                if (!CONFIG.debug) return;
+
+                window.__swDebug = {
+                    state: STATE,
+                    config: CONFIG,
+                    register: registerSW,
+                    unregister: async function () {
+                        if (STATE.registration) {
+                            const success = await STATE.registration.unregister();
+                            log('Unregistration result:', success);
+                            STATE.registration = null;
+                            STATE.activeWorker = null;
+                            STATE.waitingWorker = null;
+                            STATE.installingWorker = null;
+                            if (STATE.updateCheckTimer) clearInterval(STATE.updateCheckTimer);
+                            dismissUpdateBanner();
+                            return success;
+                        }
+                        return false;
+                    },
+                    update: function () {
+                        if (STATE.registration) {
+                            return STATE.registration.update();
+                        }
+                        return Promise.reject(new Error('No registration'));
+                    },
+                    showUpdateBanner: showUpdateBanner,
+                    dismissUpdateBanner: dismissUpdateBanner,
+                    triggerUpdate: triggerUpdate,
+                };
+
+                console.log(
+                    '%c[SW·Reg] %cDebug API exposed at %cwindow.__swDebug',
+                    'color: #4da6ff;', 'color: inherit;', 'font-weight: bold; color: #34c759;'
+                );
+                console.log('  __swDebug.state        — Current state');
+                console.log('  __swDebug.register()   — Re-register SW');
+                console.log('  __swDebug.unregister() — Unregister SW');
+                console.log('  __swDebug.update()     — Force update check');
+                console.log('  __swDebug.triggerUpdate() — Skip waiting + reload');
+            }
+
+            // ─── Initialization ─────────────────────────
+            async function init() {
+                log('Starting initialization...');
+
+                if (!detectSupport()) {
+                    // SW not supported — exit gracefully
+                    // (install banner may still work via beforeinstallprompt on some browsers)
+                    exposeDebugAPI();
+                    return;
+                }
+
+                setupConnectivityMonitoring();
+                setupMessageHandler();
+
+                const registration = await registerSW();
+
+                if (registration) {
+                    log('Service worker registration complete.');
+                    window.dispatchEvent(new CustomEvent('sw:ready', {
+                        detail: { registration },
+                    }));
+                }
+
+                exposeDebugAPI();
+            }
+
+            // ─── Handle Controller Change (External) ────
+            // This catches cases where skipWaiting is called from DevTools
+            // or another tab, ensuring our state stays in sync
+            navigator.serviceWorker.addEventListener('controllerchange', function () {
+                log('Controller change detected (may be from another tab)');
+                if (navigator.serviceWorker.controller) {
+                    STATE.activeWorker = navigator.serviceWorker.controller;
+                    STATE.waitingWorker = null;
+                    STATE.installingWorker = null;
+                }
+                window.dispatchEvent(new CustomEvent('sw:controller-change'));
+            });
+
+            // ─── Handle Service Worker Errors ───────────
+            navigator.serviceWorker.addEventListener('messageerror', function (event) {
+                error('Message error from SW:', event);
+                window.dispatchEvent(new CustomEvent('sw:message-error', {
+                    detail: event,
+                }));
+            });
+
+            // ─── Start ──────────────────────────────────
+            // Run immediately if document.body exists (script at end of body),
+            // otherwise wait for DOM readiness
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+            // ─── Expose for install banner integration ──
+            // Share the registration reference so the install banner
+            // or other scripts can access it
+            window.__swRegistration = function () {
+                return STATE.registration;
+            };
+            window.__swState = function () {
+                return STATE;
+            };
+
+            log('Service Worker registration module loaded.');
+        })();
+    </script>
+
+    <script>
+        (function () {
+            if (
+                window.matchMedia("(display-mode: standalone)").matches ||
+                navigator.standalone
+            )
+                return;
+            let deferredPrompt;
+            let banner;
+            window.addEventListener("beforeinstallprompt", (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                if (banner) {
+                    banner.style.pointerEvents = "auto";
+                    banner.style.opacity = "1";
+                }
+            });
+            banner = document.createElement("div");
+            banner.className = "installBanner";
+            banner.setAttribute('data-overlay','install');
+            banner.style.pointerEvents = "none";
+            banner.innerHTML = `
+        <div class="text">
+          <p class="title">Install App</p>
+          <p class="desc">Add to Home Screen for fast, full‑screen access</p>
+        </div>
+        <div class="arrow">
+          <svg viewBox="0 0 24 24"><polyline points="7 17 12 22 17 17"/><line x1="12" y1="22" x2="12" y2="2"/></svg>
+        </div>
+      `;
+            document.body.prepend(banner);
+            banner.addEventListener("click", async () => {
+                if (!deferredPrompt) return;
+                deferredPrompt.prompt();
+                const { outcome } = await deferredPrompt.userChoice;
+                deferredPrompt = null;
+                if (outcome === "accepted") banner.remove();
+            });
+            setTimeout(() => {
+                if (banner && banner.parentNode) {
+                    banner.style.opacity = "0";
+                    banner.style.pointerEvents = "none";
+                    setTimeout(() => {
+                        if (banner.parentNode) banner.remove();
+                    }, 250);
+                }
+            }, 3000);
+            window.addEventListener("appinstalled", () => {
+                if (banner && banner.parentNode) banner.remove();
+            });
+        })();
+</script>
+
+
+
+
+
+
+
+<script src="/modules/library.js"></script>
+    
+<script src="/index.js"></script>
+
+<script src="/modules/ytSaver.js"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/eruda"></script>
+  <script>
+    setTimeout(function() {
+      eruda.init();
+    }, 500);
+  </script>
+
+
+
+
+  </body>
+</html>
